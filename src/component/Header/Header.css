@@ -1,0 +1,72 @@
+.header {
+  position: relative;
+  height: 34vw;
+  margin: 30px auto;
+  background-size: contain;
+  position: relative;
+}
+.header-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  max-height: 34vw;
+  object-fit: cover;
+  display: block;
+}
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  left: 6vw;
+  top: 40%;
+  left: 5%;
+  animation: 2s fadeIn;
+}
+.header-contents h1 {
+  font-weight: 500;
+  color: rgba(136, 44, 178, 0.9);
+  font-size: max(3.5vw, 22px);
+}
+
+.header-contents p {
+  display: none;
+  color: rgb(17, 15, 18);
+  font-size: max(1vw, 16px);
+}
+@media (min-width: 1280px) {
+  .header-contents p {
+    display: block;
+  }
+}
+.header-contents button {
+  background-color: rgb(187, 146, 231);
+  color: rgb(17, 15, 18);
+  padding: 0.7vw 1vw;
+  border-radius: 50px;
+  font-size: max(1vw, 16px);
+  border: none;
+  cursor: pointer;
+  bottom: -50%;
+}
+.header-contents button:hover {
+  background-color: rgb(136, 44, 178);
+  color: white;
+}
+
+@media (max-width: 1050px) {
+  .header-contents {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 750px) {
+  .header-contents {
+    max-width: 55%;
+  }
+  .header-contents button {
+    padding: 1.5vw 3vw;
+  }
+}

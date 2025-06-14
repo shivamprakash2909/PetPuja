@@ -1,0 +1,84 @@
+.food-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(210, 132, 241, 0.248);
+  padding: 16px;
+  transition: transform 0.3s;
+}
+.food-card:hover {
+  transform: scale(1.01);
+}
+
+.food-card-img-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.food-card-info {
+  margin-top: 15px;
+}
+
+.fod-card-name-rating {
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fod-card-name-rating p {
+  font-weight: 600;
+  color: #444;
+}
+
+.rating-image {
+  width: 80px;
+  height: auto;
+}
+
+.food-card-description {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 8px 0;
+}
+
+.food-card-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #8e44ad;
+}
+.food-card-img-item {
+  position: relative;
+}
+
+.food-card-img-item .add-button {
+  width: 35px;
+  height: auto;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.food-count {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: white;
+}
+.food-count img {
+  width: 30px;
+  height: 30px;
+}
+.food-count p {
+  padding-right: 15px;
+  width: 9px;
+  color: #818080;
+}

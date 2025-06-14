@@ -1,0 +1,81 @@
+.navbar {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.navbar.logo {
+  width: 10 px;
+}
+.navbar-menu {
+  display: none;
+  list-style: none;
+  gap: 20px;
+  color: #49557e;
+  font-size: 18px;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navbar button {
+  background: transparent;
+  font-size: 18px;
+  color: #49557e;
+  border: 1px solid rgb(187, 146, 231);
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navbar button:hover {
+  background-color: rgb(187, 146, 231);
+  color: white;
+}
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
+.navbar li {
+  cursor: pointer;
+}
+.navbar-search-icon {
+  position: relative;
+}
+.navbar-search-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: rgb(187, 146, 231);
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
+
+@media screen and (min-width: 900px) {
+  .navbar-menu {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-right {
+    gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-right {
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-right {
+    gap: 40px;
+  }
+}
