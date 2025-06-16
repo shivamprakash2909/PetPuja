@@ -31,6 +31,20 @@ const StoreContextProvider = (props) => {
     }
     return totalAmount;
   };
+
+  const deliveryFees = () => {
+    let deliveryFee = 0;
+    const isCartEmpty = !Object.values(cartItems).some((quantity) => quantity > 0);
+    if (isCartEmpty) {
+      deliveryFee = 0;
+    } else if (totalCartValue() > 200) {
+      deliveryFee = 0;
+    } else {
+      deliveryFee = 50;
+    }
+    return deliveryFee;
+  };
+
   const contextValue = {
     food_list,
     cartItems,
@@ -38,6 +52,7 @@ const StoreContextProvider = (props) => {
     addToCart,
     removeFromCart,
     totalCartValue,
+    deliveryFees,
   };
   return <StoreContext.Provider value={contextValue}>{props.children}</StoreContext.Provider>;
 };
