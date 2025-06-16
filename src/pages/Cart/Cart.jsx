@@ -7,6 +7,17 @@ import { useNavigate } from "react-router-dom";
 const Cart = () => {
   const { food_list, cartItems, removeFromCart, addToCart, totalCartValue } = useContext(StoreContext);
   const navigate = useNavigate();
+  let deliveryFee = 0;
+  const isCartEmpty = !Object.values(cartItems).some((quantity) => quantity > 0);
+
+  if (isCartEmpty) {
+    deliveryFee = 0;
+  } else if (totalCartValue() > 200) {
+    deliveryFee = 0;
+  } else {
+    deliveryFee = 50;
+  }
+
   return (
     <div className="cart">
       <div className="art-items">
@@ -56,12 +67,12 @@ const Cart = () => {
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>₹{30}</p>
+              <p>₹{deliveryFee}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <p>Total</p>
-              <p>₹{totalCartValue() + 30}</p>
+              <p>₹{totalCartValue() + deliveryFee}</p>
             </div>
           </div>
           <button onClick={() => navigate("/order")}>PROCEED TO CHECKOUT</button>
