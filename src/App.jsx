@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import Navbar from "./component/Navbar/Navbar";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Cart from "./pages/cart/cart";
 import PlaceOrder from "./pages/placeOrder/placeOrder";
 import ErrorPage from "./component/ErrorPage/ErrorPage";
 import Footer from "./component/Footer/Footer";
 import LoginPopup from "./component/LoginPopup/LoginPopup";
+import Cart from "./pages/Cart/Cart";
 const App = () => {
   const location = useLocation();
   const validPaths = ["/", "/cart", "/order"];

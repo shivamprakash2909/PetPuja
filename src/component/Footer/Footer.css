@@ -12,6 +12,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.footer-content p {
+  display: none;
+}
 
 .footer-logo {
   width: 100px;
@@ -27,4 +30,10 @@
 
 .footer-link:hover {
   color: #624c66;
+}
+
+@media screen and (min-width: 840px) {
+  .footer-content p {
+    display: inline;
+  }
 }
