@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./component/Navbar/Navbar";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import PlaceOrder from "./pages/placeOrder/placeOrder";
+import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import ErrorPage from "./component/ErrorPage/ErrorPage";
 import Footer from "./component/Footer/Footer";
 import LoginPopup from "./component/LoginPopup/LoginPopup";
