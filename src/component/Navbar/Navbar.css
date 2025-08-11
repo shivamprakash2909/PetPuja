@@ -55,7 +55,81 @@
   top: -8px;
   right: -8px;
 }
+/* Keep your existing styles as is */
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 
+.nav-profile-dropdown {
+  position: absolute; /* let it break out of profile circle bounds */
+  top: 50px; /* adjust to match navbar height */
+  right: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  width: 200px;
+  z-index: 9999; /* ensure it's above other elements */
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* -------------------
+   Styling inside dropdown
+------------------- */
+.nav-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-profile-dropdown li:hover {
+  background: #f5f5f5;
+}
+
+.nav-profile-dropdown img {
+  width: 22px;
+  height: 22px;
+}
+
+.nav-profile-dropdown p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Divider styling */
+.nav-profile-dropdown hr {
+  margin: 4px 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+/* Special styling for logout */
+.nav-profile-dropdown li:last-child p {
+  color: #e53935;
+}
+
+.nav-profile-dropdown li:last-child:hover {
+  background: #fdecea;
+}
 @media screen and (min-width: 900px) {
   .navbar-menu {
     display: flex;

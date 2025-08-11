@@ -7,6 +7,7 @@ import ErrorPage from "./component/ErrorPage/ErrorPage";
 import Footer from "./component/Footer/Footer";
 import LoginPopup from "./component/LoginPopup/LoginPopup";
 import Cart from "./pages/Cart/Cart";
+import { ToastContainer, toast } from "react-toastify";
 const App = () => {
   const location = useLocation();
   const validPaths = ["/", "/cart", "/order"];
@@ -15,6 +16,7 @@ const App = () => {
 
   return (
     <>
+      <ToastContainer />
       {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
       <div className="app">
         {!shouldHideUI && <Navbar setShowLogin={setShowLogin} />}
